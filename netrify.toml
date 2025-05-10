@@ -1,11 +1,6 @@
 [build]
-  publish = "./"
+  publish = "public"
   command = ""
-
-[[redirects]]
-  from = "/admin"
-  to = "/admin/"
-  status = 301
 
 [[redirects]]
   from = "/admin/*"
