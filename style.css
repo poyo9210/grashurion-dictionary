@@ -1,0 +1,74 @@
+/* 背景と全体フォント */
+body {
+  background-image: url("/file_00000000334861f593cfe1839ce56836.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: #f5e9d2;
+  font-family: "Yu Mincho", "ヒラギノ明朝 ProN", serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* ヘッダー */
+header {
+  text-align: center;
+  padding: 30px 10px 10px;
+}
+
+h1 {
+  font-size: 2.2em;
+  color: #8b0000;
+  margin-bottom: 20px;
+}
+
+/* グリッドメニュー */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 12px;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* メニューボタン */
+.grid a {
+  background: linear-gradient(#a00000, #600000);
+  color: gold;
+  text-shadow: 0 0 2px #ffd700, 0 0 6px #aa8800;
+  border: 1px solid #880000;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  padding: 18px 10px;
+  font-size: 1em;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1.4;
+  white-space: normal;
+  word-break: break-word;
+  transition: transform 0.2s;
+}
+
+.grid a:hover {
+  transform: scale(1.05);
+  background: linear-gradient(#800000, #a00000);
+  box-shadow: 0 0 10px #ffd700;
+}
+
+/* 本文セクション */
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #555;
+  font-size: 0.9em;
+}
