@@ -1,0 +1,19 @@
+collections_config:
+  pages:
+    path: ''
+    name: Pages
+    icon: wysiwyg
+    disable_url: true
+  admin:
+    path: admin
+    name: Admin
+    icon: adb
+    disable_url: true
+paths:
+  static: public
+  uploads: public/uploads
+timezone: Asia/Tokyo
+markdown:
+  engine: commonmark
+  options:
+    gfm: true
