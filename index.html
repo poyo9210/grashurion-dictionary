@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>grashurion辞書 管理画面</title>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  </head>
-  <body>
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", (user) => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-          }
-        });
-      }
-    </script>
-
-    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
-  </body>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>グラシュリオン設定辞典</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>グラシュリオン設定辞典</h1>
+  <p>カテゴリを選択してください：</p>
+  <div class="button-grid">
+    <a class="category-button" href="pages/">・時代<br>・年表</a>
+    <a class="category-button" href="pages/">・装置<br>・道具</a>
+    <a class="category-button" href="pages/">・大陸<br>・国名</a>
+    <a class="category-button" href="pages/">・作品別<br>・キャラクター</a>
+    <a class="category-button" href="pages/">・種族</a>
+    <a class="category-button" href="pages/">・専門<br>・用語</a>
+    <a class="category-button" href="pages/">・神話<br>・宗教</a>
+    <a class="category-button" href="pages/">・言語<br>・辞典</a>
+    <a class="category-button" href="pages/">・魔法<br>・体系</a>
+    <a class="category-button" href="pages/">・魔物<br>・図鑑</a>
+  </div>
+</body>
 </html>
