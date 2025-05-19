@@ -10,6 +10,14 @@ collections:
         type: text
       body:
         type: markdown
+paths:
+  static: public
+  uploads: public/uploads
+timezone: Asia/Tokyo
+markdown:
+  engine: commonmark
+  options:
+    gfm: true
 
   admin:
     path: admin
