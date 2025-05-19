@@ -1,2 +1,0 @@
-/admin/*
-  Content-Security-Policy: script-src 'self' 'unsafe-eval' https://identity.netlify.com https://unpkg.com; style-src 'self' 'unsafe-inline';
