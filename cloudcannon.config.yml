@@ -1,23 +1,25 @@
 collections:
   pages:
-    path: /
+    path: ''
     output: true
+    name: Pages
     editor:
       type: page
-      inputs:
-        title:
-          type: text
-        body:
-          type: markdown
+    inputs:
+      title:
+        type: text
+      body:
+        type: markdown
 
   admin:
     path: admin
     output: false
+    name: Admin
     editor:
       type: data
-      inputs:
-        setting:
-          type: text
+    inputs:
+      setting:
+        type: text
 
 paths:
   static: public
