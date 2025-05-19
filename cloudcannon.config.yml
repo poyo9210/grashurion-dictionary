@@ -1,18 +1,30 @@
-collections_config:
+collections:
   pages:
-    path: ''
-    name: Pages
-    icon: wysiwyg
-    disable_url: true
+    path: /
+    output: true
+    editor:
+      type: page
+      inputs:
+        title:
+          type: text
+        body:
+          type: markdown
+
   admin:
     path: admin
-    name: Admin
-    icon: adb
-    disable_url: true
+    output: false
+    editor:
+      type: data
+      inputs:
+        setting:
+          type: text
+
 paths:
   static: public
   uploads: public/uploads
+
 timezone: Asia/Tokyo
+
 markdown:
   engine: commonmark
   options:
