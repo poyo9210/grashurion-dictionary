@@ -18,24 +18,3 @@ markdown:
   engine: commonmark
   options:
     gfm: true
-
-  admin:
-    path: admin
-    output: false
-    name: Admin
-    editor:
-      type: data
-    inputs:
-      setting:
-        type: text
-
-paths:
-  static: public
-  uploads: public/uploads
-
-timezone: Asia/Tokyo
-
-markdown:
-  engine: commonmark
-  options:
-    gfm: true
