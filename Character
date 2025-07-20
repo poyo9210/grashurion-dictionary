@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>キャラクター一覧 - グラシュリオン設定辞典</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: #faf6e5;
+      color: #2c1608;
+      font-family: "游明朝", "Yu Mincho", "serif";
+      margin: 0; padding: 0;
+    }
+    header {
+      background: #800000;
+      color: gold;
+      text-align: center;
+      padding: 1.3em 0 1em 0;
+      font-size: 2em;
+      letter-spacing: 0.1em;
+    }
+    .char-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 2em;
+      gap: 1.5em;
+    }
+    .character-card {
+      background: #fff8f0;
+      border: 2px solid #a83e2c;
+      border-radius: 15px;
+      padding: 1.2em;
+      width: 260px;
+      box-shadow: 0 4px 8px #0003;
+    }
+    .character-card h2 {
+      margin-top: 0;
+      color: #800000;
+      font-size: 1.3em;
+      border-bottom: 1px solid #a83e2c;
+      padding-bottom: 0.3em;
+    }
+    .character-card p {
+      font-size: 0.95em;
+      line-height: 1.6;
+      margin-top: 0.5em;
+    }
+    .footer {
+      margin: 3em 0 1.5em 0;
+      text-align: center;
+    }
+    .footer a {
+      color: #a83e2c;
+      text-decoration: underline;
+      margin: 0 1em;
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    キャラクター一覧
+  </header>
+
+  <div class="char-container">
+    <!-- キャラカードはここから追加可能 -->
+    <div class="character-card">
+      <h2>ラエルクス・ラヴィーネル</h2>
+      <p>神造の存在として生まれた少女。虹彩のような瞳と銀金桃の髪を持ち、転生者でありながらこの世界に奇跡をもたらす鍵。</p>
+    </div>
+
+    <div class="character-card">
+      <h2>六道陽翔</h2>
+      <p>地球からの転生者であり、極秘の特殊部隊出身。身体記憶と戦闘判断に優れ、世界の真実に迫る主観的視点の持ち主。</p>
+    </div>
+
+    <div class="character-card">
+      <h2>キレリヤ・キヴァルゼル</h2>
+      <p>風のように感情で駆ける少女。直情的だが人を想う力は強く、仲間のためには真っ先に飛び出す熱血タイプ。</p>
+    </div>
+
+    <div class="character-card">
+      <h2>シレヴェル・シロネス</h2>
+      <p>知識と観察の継承者。臆病に見えるが真理を探究する強い信念を内に秘め、理性的な判断と解説役を担う。</p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <a href="index.html">← トップページに戻る</a>
+  </div>
+</body>
+</html>
