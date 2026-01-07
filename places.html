@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>地名一覧</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body { background: #faf6e5; color: #2c1608; font-family: "游明朝", serif; margin:0; padding:0; }
+    header { background: #800000; color: gold; text-align: center; padding: 1em 0; }
+    .list-container { max-width: 600px; margin: 2em auto; padding: 0 20px; }
+    
+    /* リンクボタンのデザイン */
+    .place-link {
+      display: block;
+      background: #fff;
+      border: 1px solid #a83e2c;
+      padding: 15px;
+      margin-bottom: 10px;
+      text-decoration: none;
+      color: #800000;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: 0.2s;
+    }
+    .place-link:active { background: #e6dec5; }
+    .place-link i { margin-right: 10px; color: #d60000; }
+  </style>
+</head>
+<body>
+  <header><h1>地名・地理</h1></header>
+
+  <div class="list-container">
+    
+    <a href="place-leon.html" class="place-link">
+      <i class="fa-solid fa-dungeon"></i> 古代グラシュリオン
+    </a>
+
+    <a href="#" class="place-link">
+      <i class="fa-solid fa-tree"></i> 嘆きの森（準備中）
+    </a>
+
+  </div>
+  
+  <div style="text-align:center; margin-bottom:30px;">
+    <a href="index.html">トップに戻る</a>
+  </div>
+</body>
+</html>
