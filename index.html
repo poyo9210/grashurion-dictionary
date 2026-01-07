@@ -2,19 +2,24 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-<meta name="google-site-verification" content="P_eHMCHl34ZZZo6j2ZpKkeLe14CoxsWRrUZg0Ei2dXA" />
+  <meta name="google-site-verification" content="P_eHMCHI34ZZZo6j2ZpKkeLe14CoxsWRrUZgOEi2dXA" />
+  
   <title>グラシュリオン設定辞典</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <style>
     body {
       background: #faf6e5;
       color: #2c1608;
       font-family: "游明朝", "Yu Mincho", "serif";
       margin: 0; padding: 0;
+      
+      /* 防衛策2：コピペ禁止（選択不可にする） */
+      -webkit-user-select: none;
+      user-select: none;
     }
     header {
-      background: linear-gradient(to bottom, #800000, #500000); /* グラデーションで高級感 */
+      background: linear-gradient(to bottom, #800000, #500000);
       color: gold;
       text-align: center;
       padding: 1.5em 0;
@@ -27,7 +32,6 @@
       text-shadow: 2px 2px 0 #000;
     }
     
-    /* 検索窓のデザイン */
     .search-box {
       text-align: center;
       margin: 1.5em 0 0.5em 0;
@@ -54,22 +58,21 @@
       color: gold;
       border-radius: 12px;
       margin: 0.8em;
-      width: 140px; /* 固定幅で見やすく */
+      width: 140px;
       height: 100px;
       display: flex;
-      flex-direction: column; /* アイコンと文字を縦並びに */
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       font-size: 1.1em;
-      box-shadow: 0 4px 0 #7a2a1e; /* 立体的なボタン影 */
+      box-shadow: 0 4px 0 #7a2a1e;
       font-family: "游明朝", "Yu Mincho", "serif";
       text-decoration: none;
       text-align: center;
       transition: transform 0.1s, box-shadow 0.1s;
-      position: relative;
     }
     .category:active {
-      transform: translateY(4px); /* 押した沈み込み */
+      transform: translateY(4px);
       box-shadow: 0 0 0 #7a2a1e;
     }
     .category i {
@@ -78,20 +81,33 @@
       color: #ffd700;
     }
     
-    /* 検索でヒットしない場合は非表示にするクラス */
-    .hidden {
-      display: none;
+    /* Xボタン専用のデザイン（黒色） */
+    .category.x-btn {
+      background: #000;
+      box-shadow: 0 4px 0 #333;
+    }
+    .category.x-btn:active {
+      box-shadow: 0 0 0 #333;
     }
 
+    .hidden { display: none; }
+
     .footer {
-      margin: 3em 0 1.5em 0;
+      margin: 3em 0 2em 0;
       text-align: center;
       font-size: 0.8em;
-      opacity: 0.8;
+      padding: 20px;
+      background: #e6dec5;
+      border-top: 1px solid #cbb;
     }
-    .footer a {
-      color: #a83e2c;
-      margin: 0 1em;
+    .copyright {
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+    .warning {
+      color: #800000;
+      font-size: 0.9em;
+      line-height: 1.5;
     }
   </style>
 </head>
@@ -102,10 +118,14 @@
   </header>
 
   <div class="search-box">
-    <input type="text" id="searchInput" placeholder="項目を検索（例：魔法）...">
+    <input type="text" id="searchInput" placeholder="項目を検索...">
   </div>
 
   <div class="container" id="buttonContainer">
+    <a class="category" href="characters.html">
+      <i class="fa-solid fa-users"></i>
+      キャラクター
+    </a>
     <a class="category" href="monsters.html">
       <i class="fa-solid fa-dragon"></i>
       魔物図鑑
@@ -118,10 +138,6 @@
       <i class="fa-solid fa-hourglass-half"></i>
       時代・年表
     </a>
-    <a class="category" href="characters.html">
-      <i class="fa-solid fa-users"></i>
-      キャラクター
-    </a>
     <a class="category" href="races.html">
       <i class="fa-solid fa-dna"></i>
       種族
@@ -129,10 +145,6 @@
     <a class="category" href="myth.html">
       <i class="fa-solid fa-church"></i>
       神話・宗教
-    </a>
-    <a class="category" href="language.html">
-      <i class="fa-solid fa-language"></i>
-      言語
     </a>
     <a class="category" href="magic-system/magic.html">
       <i class="fa-solid fa-wand-sparkles"></i>
@@ -142,25 +154,31 @@
       <i class="fa-solid fa-hammer"></i>
       装置・道具
     </a>
-    <a class="category" href="地名/places.html">
+    <a class="category" href="places.html">
       <i class="fa-solid fa-map-location-dot"></i>
       地名
+    </a>
+    
+    <a class="category x-btn" href="https://x.com/@tadoandmakaka/ target="_blank">
+      <i class="fa-brands fa-x-twitter"></i>
+      作者・更新
     </a>
   </div>
 
   <div class="footer">
-    <p>Created with GitHub & AI</p>
-    <a href="#">トップに戻る</a>
+    <p class="copyright">&copy; 2026 グラシュリオン設定辞典 All Rights Reserved.</p>
+    <p class="warning">
+      当サイトの内容、テキスト、設定等の<br>
+      無断転載・無断使用・自作発言を固く禁じます。<br>
+      Unauthorized copying prohibited.
+    </p>
   </div>
 
   <script>
-    // 検索機能のスクリプト
     document.getElementById('searchInput').addEventListener('keyup', function() {
       let searchValue = this.value.toLowerCase();
       let buttons = document.querySelectorAll('.category');
-
       buttons.forEach(function(btn) {
-        // ボタンの中の文字を取得
         let text = btn.textContent.toLowerCase();
         if(text.includes(searchValue)) {
           btn.classList.remove('hidden');
