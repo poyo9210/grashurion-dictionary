@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="google-site-verification" content="P_eHMCHI34ZZZo6j2ZpKkeLe14CoxsWRrUZgOEi2dXA" />
+  
+  <title>グラシュリオン設定辞典</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: #faf6e5;
+      color: #2c1608;
+      font-family: "游明朝", "Yu Mincho", "serif";
+      margin: 0; padding: 0;
+      
+      /* 防衛策2：コピペ禁止（選択不可にする） */
+      -webkit-user-select: none;
+      user-select: none;
+    }
+    header {
+      background: linear-gradient(to bottom, #800000, #500000);
+      color: gold;
+      text-align: center;
+      padding: 1.5em 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+    h1 {
+      margin: 0;
+      font-size: 1.8em;
+      letter-spacing: 0.1em;
+      text-shadow: 2px 2px 0 #000;
+    }
+    
+    .search-box {
+      text-align: center;
+      margin: 1.5em 0 0.5em 0;
+    }
+    #searchInput {
+      padding: 10px;
+      font-size: 16px;
+      width: 80%;
+      max-width: 400px;
+      border: 2px solid #a83e2c;
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 1em 0 3em 0;
+      padding: 0 10px;
+    }
+    .category {
+      background: #a83e2c;
+      color: gold;
+      border-radius: 12px;
+      margin: 0.8em;
+      width: 140px;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1em;
+      box-shadow: 0 4px 0 #7a2a1e;
+      font-family: "游明朝", "Yu Mincho", "serif";
+      text-decoration: none;
+      text-align: center;
+      transition: transform 0.1s, box-shadow 0.1s;
+    }
+    .category:active {
+      transform: translateY(4px);
+      box-shadow: 0 0 0 #7a2a1e;
+    }
+    .category i {
+      font-size: 1.8em;
+      margin-bottom: 5px;
+      color: #ffd700;
+    }
+    
+    /* Xボタン専用のデザイン（黒色） */
+    .category.x-btn {
+      background: #000;
+      box-shadow: 0 4px 0 #333;
+    }
+    .category.x-btn:active {
+      box-shadow: 0 0 0 #333;
+    }
+
+    .hidden { display: none; }
+
+    .footer {
+      margin: 3em 0 2em 0;
+      text-align: center;
+      font-size: 0.8em;
+      padding: 20px;
+      background: #e6dec5;
+      border-top: 1px solid #cbb;
+    }
+    .copyright {
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+    .warning {
+      color: #800000;
+      font-size: 0.9em;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>グラシュリオン<br>設定辞典</h1>
+  </header>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="項目を検索...">
+  </div>
+
+  <div class="container" id="buttonContainer">
+    <a class="category" href="characters.html">
+      <i class="fa-solid fa-users"></i>
+      キャラクター
+    </a>
+    <a class="category" href="monsters.html">
+      <i class="fa-solid fa-dragon"></i>
+      魔物図鑑
+    </a>
+    <a class="category" href="dictionary.html">
+      <i class="fa-solid fa-book-open"></i>
+      用語辞典
+    </a>
+    <a class="category" href="history.html">
+      <i class="fa-solid fa-hourglass-half"></i>
+      時代・年表
+    </a>
+    <a class="category" href="races.html">
+      <i class="fa-solid fa-dna"></i>
+      種族
+    </a>
+    <a class="category" href="myth.html">
+      <i class="fa-solid fa-church"></i>
+      神話・宗教
+    </a>
+    <a class="category" href="magic-system/magic.html">
+      <i class="fa-solid fa-wand-sparkles"></i>
+      魔法体系
+    </a>
+    <a class="category" href="tools.html">
+      <i class="fa-solid fa-hammer"></i>
+      装置・道具
+    </a>
+    <a class="category" href="places.html">
+      <i class="fa-solid fa-map-location-dot"></i>
+      地名
+    </a>
+    
+    <a class="category x-btn" href="https://x.com/tadoandmkaka" target="_blank">
+      <i class="fa-brands fa-x-twitter"></i>
+      作者・更新
+    </a>
+  </div>
+
+  <div class="footer">
+    <p class="copyright">&copy; 2026 グラシュリオン設定辞典 All Rights Reserved.</p>
+    <p class="warning">
+      当サイトの内容、テキスト、設定等の<br>
+      無断転載・無断使用・自作発言を固く禁じます。<br>
+      Unauthorized copying prohibited.
+    </p>
+  </div>
+
+  <script>
+    document.getElementById('searchInput').addEventListener('keyup', function() {
+      let searchValue = this.value.toLowerCase();
+      let buttons = document.querySelectorAll('.category');
+      buttons.forEach(function(btn) {
+        let text = btn.textContent.toLowerCase();
+        if(text.includes(searchValue)) {
+          btn.classList.remove('hidden');
+        } else {
+          btn.classList.add('hidden');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

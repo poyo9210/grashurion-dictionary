@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>登場人物 - グラシュリオン設定辞典</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    /* 共通デザイン（index.htmlと同じ雰囲気） */
+    body {
+      background: #faf6e5;
+      color: #2c1608;
+      font-family: "游明朝", "Yu Mincho", "serif";
+      margin: 0; padding: 0;
+    }
+    header {
+      background: linear-gradient(to bottom, #800000, #500000);
+      color: gold;
+      text-align: center;
+      padding: 1em 0;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+      position: relative;
+    }
+    h1 { margin: 0; font-size: 1.5em; }
+    
+    /* 戻るボタン */
+    .back-btn {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: gold;
+      font-size: 1.2em;
+      text-decoration: none;
+    }
+
+    /* キャラクターカードのレイアウト */
+    .char-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    /* カードのデザイン */
+    .char-card {
+      background: #fff;
+      border: 2px solid #a83e2c;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 350px; /* スマホで見やすい幅 */
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    
+    /* キャラクターのヘッダー（名前と肩書き） */
+    .char-header {
+      background: #a83e2c;
+      color: gold;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+    .char-name { font-weight: bold; font-size: 1.2em; }
+    .char-role { font-size: 0.8em; opacity: 0.9; }
+    
+    /* 詳細エリア（初期状態は隠すか、少し見せる） */
+    .char-details {
+      padding: 15px;
+      font-size: 0.95em;
+      line-height: 1.6;
+    }
+    
+    /* ステータス表 */
+    .status-table {
+      width: 100%;
+      margin-top: 10px;
+      border-collapse: collapse;
+      font-size: 0.9em;
+    }
+    .status-table th { background: #eee; padding: 5px; border: 1px solid #ccc; width: 30%; }
+    .status-table td { padding: 5px; border: 1px solid #ccc; }
+
+    /* キーワード強調 */
+    .highlight { color: #d60000; font-weight: bold; }
+    
+    .footer { text-align: center; margin: 2em 0; opacity: 0.8; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i></a>
+    <h1>主要登場人物</h1>
+  </header>
+
+  <div class="char-container">
+
+    <div class="char-card">
+      <div class="char-header">
+        <div>
+          <div class="char-role">主人公 / 元宮廷魔導師</div>
+          <div class="char-name">ルーデンガレス</div>
+        </div>
+        <i class="fa-solid fa-user-secret fa-2x"></i>
+      </div>
+      <div class="char-details">
+        <p>16歳。痩身の少年。<br>
+        かつては人類史最高の天才魔導師だったが、国家反逆罪で追放された。<br>
+        <strong>右目は「黒曜石の義眼」、左腕は「鉄屑の義手」</strong>。</p>
+        <table class="status-table">
+          <tr><th>特技</th><td>超推理（魔眼による観察）</td></tr>
+          <tr><th>性格</th><td>冷徹なリアリスト（実は世話焼き）</td></tr>
+          <tr><th>武器</th><td>論理と知識</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="char-card">
+      <div class="char-header">
+        <div>
+          <div class="char-role">ヒロイン / 捜査官</div>
+          <div class="char-name">リヴィア</div>
+        </div>
+        <i class="fa-solid fa-chess-queen fa-2x"></i>
+      </div>
+      <div class="char-details">
+        <p>銀髪に紫の瞳を持つ美女。<br>
+        国連特別査問機関<strong>『オルディナス』</strong>の捜査官。<br>
+        ルーデンの知能を高く評価し、彼を「謎」で飼い慣らす相棒。</p>
+        <table class="status-table">
+          <tr><th>特技</th><td>心理掌握、プロファイリング</td></tr>
+          <tr><th>性格</th><td>妖艶、計算高い</td></tr>
+          <tr><th>好物</th><td>ルーデンの困り顔</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="char-card">
+      <div class="char-header">
+        <div>
+          <div class="char-role">食堂店主 / ？？？</div>
+          <div class="char-name">ノア</div>
+        </div>
+        <i class="fa-solid fa-utensils fa-2x"></i>
+      </div>
+      <div class="char-details">
+        <p>スラムの定食屋『異界食堂 ベリアル』の店主。<br>
+        ふわふわした金髪の美少年。<br>
+        <span class="highlight">現代知識（マヨネーズ等）</span>を使った料理を振る舞う。</p>
+        <table class="status-table">
+          <tr><th>正体</th><td>転生者にして魔王</td></tr>
+          <tr><th>性格</th><td>天然ボケ（演技）</td></tr>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <a href="index.html">トップに戻る</a>
+  </div>
+
+</body>
+</html>
